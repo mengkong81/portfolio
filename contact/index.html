@@ -16,6 +16,20 @@
         </ul>
     </nav>
     <h1>Contact</h1>
-    <p>You can contact me via email at: mengkongaun@gmail.com</p>
+
+    <!-- Contact Form -->
+    <form action="mailto:mengkongaun@gmail.com" method="POST" enctype="text/plain">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" value="example@example.com" required>
+        
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" value="Your Subject Here">
+        
+        <label for="body">Message:</label>
+        <textarea id="body" name="body" rows="5">Your message here...</textarea>
+        
+        <button type="submit">Send Email</button>
+    </form>
+
 </body>
 </html>
