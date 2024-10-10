@@ -1,3 +1,4 @@
+/* General body styling */
 body {
   font: 100%/1.5 system-ui;
   max-width: 100ch;
@@ -36,8 +37,8 @@ nav a {
 
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h);
-  border-radius: 5px;
+  background-color: oklch(from var(--color-accent) 95% 5% h); /* Light background on hover */
+  border-radius: 5px; /* Rounded hover effect */
 }
 
 nav a.current {
@@ -72,16 +73,16 @@ input, textarea, button {
 button {
   grid-column: 1 / -1; /* Make the button span across both columns */
   padding: 1em;
-  background-color: var(--color-accent);
-  color: white;
+  background-color: var(--color-accent); /* Button background color */
+  color: white; /* Button text color */
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 5px; /* Slight rounding for buttons */
 }
 
 button:hover {
-  background-color: oklch(65% 50% 0);
-  color: white;
+  background-color: oklch(65% 50% 0); /* Button hover background color */
+  color: white; /* Ensure button text stays visible on hover */
 }
 
 /* Projects page styling */
