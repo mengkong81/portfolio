@@ -116,3 +116,41 @@ button:hover {
   font-size: 0.9em;
   color: #666;
 }
+/* Projects page styling */
+.projects {
+  display: grid; /* Make it a grid container */
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Responsive grid */
+  gap: 1.5em; /* Space between project cards */
+  padding: 1.5em;
+}
+
+/* Article styling with subgrid */
+.projects article {
+  display: grid; /* Make each article a grid */
+  grid-template-rows: subgrid; /* Use subgrid to align rows */
+  grid-row: span 3; /* Span 3 rows for each article */
+  border: 1px solid #ddd;
+  padding: 1em;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+/* Adjust margin on h2 for better alignment */
+.projects h2 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.2em;
+}
+
+/* Ensure consistent image size */
+.projects img {
+  width: 100px;
+  height: 100px;
+  margin: 0.5em 0;
+}
+
+/* Paragraph styling inside articles */
+.projects p {
+  font-size: 0.9em;
+  color: #666;
+}
