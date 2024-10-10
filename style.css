@@ -1,7 +1,13 @@
 body {
-    /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
-    font: 100%/1.5 system-ui;
-  }
+  /* Set line height to 1.5 times the font size and use the OS’s UI font */
+  font: 100%/1.5 system-ui;
   
+  /* Add max-width for better readability on larger screens */
+  max-width: 100ch;
+  
+  /* Center content with automatic left and right margins */
+  margin: 0 auto;
+  
+  /* Add padding for spacing around the content */
+  padding: 1em;
+}
