@@ -81,4 +81,5 @@ button {
 
 button:hover {
   background-color: oklch(65% 50% 0);
+  color: white;
 }
