@@ -6,6 +6,33 @@ body {
   padding: 1em;
   padding-left: 1.5em;
   padding-right: 1.5em;
+  accent-color: var(--color-accent); /* Apply the accent color to the document */
+}
+./* Define the accent color for the website */
+:root {
+  --color-accent: oklch(65% 50% 0); /* Customize your accent color */
+}
+
+/* Global heading styles */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1; /* Tighter leading for headings */
+  text-wrap: balance; /* Prevent uneven wrapping of headings */
+}
+
+/* Specific heading sizes */
+h1 {
+  font-size: 4em; /* 400% of body text size */
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2em; /* 200% of body text size for hierarchy */
+  margin-bottom: 0.3em;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.2em;
 }
 
 /* Navigation bar styling */
@@ -74,7 +101,7 @@ button {
   grid-column: 1 / -1; /* Make the button span across both columns */
   padding: 1em;
   background-color: var(--color-accent); /* Button background color */
-  color: white; /* Button text color */
+  color: black; /* Button text color */
   border: none;
   cursor: pointer;
   border-radius: 5px; /* Slight rounding for buttons */
@@ -85,37 +112,6 @@ button:hover {
   color: white; /* Ensure button text stays visible on hover */
 }
 
-/* Projects page styling */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-  gap: 1.5em; /* Space between project cards */
-  padding: 1.5em;
-}
-
-.projects article {
-  border: 1px solid #ddd;
-  padding: 1em;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.projects img {
-  width: 100px;
-  height: 100px;
-  margin: 0.5em 0;
-}
-
-.projects h2 {
-  font-size: 1.2em;
-  margin-bottom: 0.5em;
-}
-
-.projects p {
-  font-size: 0.9em;
-  color: #666;
-}
 /* Projects page styling */
 .projects {
   display: grid; /* Make it a grid container */
@@ -139,7 +135,8 @@ button:hover {
 /* Adjust margin on h2 for better alignment */
 .projects h2 {
   margin: 0; /* Remove default margin */
-  font-size: 1.2em;
+  font-size: 1.5em; /* Adjust font size for clarity */
+  margin-bottom: 0.5em;
 }
 
 /* Ensure consistent image size */
