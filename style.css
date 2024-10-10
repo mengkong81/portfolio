@@ -22,6 +22,8 @@ nav {
   justify-content: space-between; /* Distribute the links evenly */
   gap: 1em; /* Add space between the links */
   margin-bottom: 2em; /* Add space below the navigation bar */
+  padding-bottom: 0.5em; /* Add bottom padding for better spacing */
+  border-bottom: 1px solid oklch(80% 3% 200); /* Subtle bottom border with cool gray color */
 }
 
 nav ul {
@@ -35,9 +37,9 @@ nav li {
 nav a {
   flex: 1; /* Make all links take up the same amount of space */
   text-align: center; /* Center the text inside each link */
-  padding: 1em;
+  padding: 0.5em; /* Add padding for spacing */
   text-decoration: none; /* Remove underline from links */
-  color: #333; /* Set the text color */
+  color: inherit; /* Inherit the text color from parent element */
   font-weight: bold;
 }
 
@@ -49,5 +51,6 @@ nav a:hover {
 /* Styling the current page link */
 nav a.current {
   color: #007BFF; /* Highlight the current page link */
-  border-bottom: 2px solid #007BFF; /* Add a bottom border to indicate the current page */
+  border-bottom: 0.4em solid oklch(80% 3% 200); /* Thick bottom border for current page link */
+  padding-bottom: 0.1em; /* Reduce padding-bottom to offset the border */
 }
