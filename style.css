@@ -6,7 +6,7 @@ body {
   max-width: 100ch;
   
   /* Center content with automatic left and right margins */
-  margin: 0 auto;
+  margin-inline: auto;
   
   /* Add padding for spacing around the content */
   padding: 1em;
