@@ -15,3 +15,32 @@ body {
    padding-left: 1.5em;
    padding-right: 1.5em;
 }
+
+/* Navigation bar styling */
+nav ul {
+  display: contents; /* Remove default list styling */
+}
+
+nav li {
+  display: contents; /* Remove default list item styling */
+}
+
+nav a {
+  text-decoration: none; /* Remove underline from links */
+  padding: 1em;
+  color: #333; /* Set the text color */
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #f0f0f0; /* Add a hover effect */
+  border-radius: 5px; /* Add some roundness to the hover background */
+}
+
+/* Align the navigation bar horizontally */
+nav {
+  display: flex;
+  justify-content: center; /* Center the navigation bar */
+  gap: 1em; /* Add space between the links */
+  margin-bottom: 2em; /* Add space below the navigation bar */
+}
