@@ -11,12 +11,19 @@ body {
   /* Add padding for spacing around the content */
   padding: 1em;
 
-   /* Add more padding on smaller screens */
-   padding-left: 1.5em;
-   padding-right: 1.5em;
+  /* Add more padding on smaller screens */
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
 /* Navigation bar styling */
+nav {
+  display: flex; /* Enable Flexbox for the navigation bar */
+  justify-content: space-between; /* Distribute the links evenly */
+  gap: 1em; /* Add space between the links */
+  margin-bottom: 2em; /* Add space below the navigation bar */
+}
+
 nav ul {
   display: contents; /* Remove default list styling */
 }
@@ -26,8 +33,10 @@ nav li {
 }
 
 nav a {
-  text-decoration: none; /* Remove underline from links */
+  flex: 1; /* Make all links take up the same amount of space */
+  text-align: center; /* Center the text inside each link */
   padding: 1em;
+  text-decoration: none; /* Remove underline from links */
   color: #333; /* Set the text color */
   font-weight: bold;
 }
@@ -37,10 +46,8 @@ nav a:hover {
   border-radius: 5px; /* Add some roundness to the hover background */
 }
 
-/* Align the navigation bar horizontally */
-nav {
-  display: flex;
-  justify-content: center; /* Center the navigation bar */
-  gap: 1em; /* Add space between the links */
-  margin-bottom: 2em; /* Add space below the navigation bar */
+/* Styling the current page link */
+nav a.current {
+  color: #007BFF; /* Highlight the current page link */
+  border-bottom: 2px solid #007BFF; /* Add a bottom border to indicate the current page */
 }
