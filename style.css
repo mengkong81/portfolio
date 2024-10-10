@@ -1,63 +1,84 @@
-/* Define the accent color */
-html {
-  --color-accent: oklch(65% 50% 0); /* Customize this value for your preferred accent color */
-  accent-color: var(--color-accent); /* Ensure all elements can inherit the accent color */
-}
-
 body {
-/* Set line height to 1.5 times the font size and use the OS’s UI font */
-font: 100%/1.5 system-ui;
-
-/* Add max-width for better readability on larger screens */
-max-width: 100ch;
-
-/* Center content with automatic left and right margins */
-margin-inline: auto;
-
-/* Add padding for spacing around the content */
-padding: 1em;
-
-/* Add more padding on smaller screens */
-padding-left: 1.5em;
-padding-right: 1.5em;
+  font: 100%/1.5 system-ui;
+  max-width: 100ch;
+  margin-inline: auto;
+  padding: 1em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
 /* Navigation bar styling */
 nav {
-display: flex; /* Enable Flexbox for the navigation bar */
-justify-content: space-between; /* Distribute the links evenly */
-gap: 1em; /* Add space between the links */
-margin-bottom: 2em; /* Add space below the navigation bar */
-padding-bottom: 0.5em; /* Add bottom padding for better spacing */
-border-bottom: 1px solid oklch(80% 3% 200); /* Subtle bottom border with cool gray color */
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  margin-bottom: 2em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid oklch(80% 3% 200);
 }
 
 nav ul {
-display: contents; /* Remove default list styling */
+  display: contents;
 }
 
 nav li {
-display: contents; /* Remove default list item styling */
+  display: contents;
 }
 
 nav a {
-flex: 1; /* Make all links take up the same amount of space */
-text-align: center; /* Center the text inside each link */
-padding: 0.5em; /* Add padding for spacing */
-text-decoration: none; /* Remove underline from links */
-color: inherit; /* Inherit the text color from parent element */
-font-weight: bold;
+  flex: 1;
+  text-align: center;
+  padding: 0.5em;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
 }
 
 nav a:hover {
-border-bottom: 0.4em solid var(--color-accent); /* Accent color border on hover */
-background-color: oklch(from var(--color-accent) 95% 5% h); /* Light background based on accent color */
-border-radius: 5px; /* Add some roundness to the hover background */
+  border-bottom: 0.4em solid var(--color-accent);
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+  border-radius: 5px;
 }
 
-/* Styling the current page link */
 nav a.current {
-color: var(--color-accent); /* Use the accent color for the current link */
-border-bottom: 0.4em solid var(--color-accent); /* Thick bottom border for current page link */
-padding-bottom: 0.1em; /* Reduce padding-bottom to offset the border */
+  color: var(--color-accent);
+  border-bottom: 0.4em solid var(--color-accent);
+  padding-bottom: 0.1em;
+}
+
+/* Form layout using CSS Grid */
+form {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Labels on the left, input fields on the right */
+  gap: 1em; /* Add space between form controls */
+  max-width: 600px; /* Limit form width */
+  margin: 0 auto; /* Center the form */
+}
+
+/* Make labels and inputs stack properly */
+label {
+  display: block;
+  margin-block: 0.5em;
+}
+
+input, textarea, button {
+  font: inherit; /* Inherit the same font as the rest of the page */
+  width: 100%; /* Full width for inputs and textarea */
+  padding: 0.5em;
+  box-sizing: border-box; /* Include padding and borders in width */
+}
+
+/* Align buttons to span across the form */
+button {
+  grid-column: 1 / -1; /* Make the button span across both columns */
+  padding: 1em;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: oklch(65% 50% 0);
 }
