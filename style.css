@@ -44,7 +44,7 @@ nav {
   gap: 1em; /* Add space between links */
   margin-bottom: 2em;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid var(--color-accent-fallback, var(--color-accent)); /* Subtle border */
+  border-bottom: 1px solid var(--color-accent-fallback); /* Subtle border */
 }
 
 nav ul {
@@ -65,14 +65,14 @@ nav a {
 }
 
 nav a:hover {
-  border-bottom: 0.4em solid var(--color-accent, var(--color-accent-fallback)); /* Accent color on hover */
-  background-color: rgba(30, 144, 255, 0.1); /* Light background on hover (fallback) */
+  border-bottom: 0.4em solid var(--color-accent); /* Accent color on hover */
+  background-color: rgba(30, 144, 255, 0.1); /* Light background on hover */
   border-radius: 5px; /* Rounded corners on hover */
 }
 
 nav a.current {
-  color: var(--color-accent, var(--color-accent-fallback)); /* Highlight the current page link with accent color */
-  border-bottom: 0.4em solid var(--color-accent, var(--color-accent-fallback)); /* Thick bottom border for current page */
+  color: var(--color-accent); /* Highlight the current page link with accent color */
+  border-bottom: 0.4em solid var(--color-accent); /* Thick bottom border for current page */
   padding-bottom: 0.1em; /* Adjust padding to account for the border */
 }
 
@@ -102,7 +102,7 @@ input, textarea, button {
 button {
   grid-column: 1 / -1; /* Make the button span across both columns */
   padding: 1em;
-  background-color: #eaf4ff, var(--color-accent-fallback)); /* Button background color */
+  background-color: var(--color-accent); /* Button background color */
   color: black; /* Button text color */
   border: none;
   cursor: pointer;
@@ -122,8 +122,7 @@ button:hover {
   padding: 1.5em;
 }
 
-
-/* Article styling with subgrid */
+/* Article styling */
 .projects article {
   display: grid;
   grid-template-rows: auto auto auto; /* Keep articles structured with grid */
