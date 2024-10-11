@@ -102,7 +102,7 @@ input, textarea, button {
 button {
   grid-column: 1 / -1; /* Make the button span across both columns */
   padding: 1em;
-  background-color: var(--color-accent, var(--color-accent-fallback)); /* Button background color */
+  background-color: #eaf4ff, var(--color-accent-fallback)); /* Button background color */
   color: black; /* Button text color */
   border: none;
   cursor: pointer;
