@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Specific heading sizes */
 h1 {
-  font-size: 4em; /* 400% of body text size */
+  font-size: 2.5em; /* 400% of body text size */
   margin-bottom: 0.5em;
 }
 
