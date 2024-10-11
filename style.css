@@ -116,17 +116,16 @@ button:hover {
 
 /* Projects page styling */
 .projects {
-  display: grid; /* Make it a grid container */
-  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Responsive grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid with minimum width for columns */
   gap: 1.5em; /* Space between project cards */
   padding: 1.5em;
 }
 
 /* Article styling with subgrid */
 .projects article {
-  display: grid; /* Make each article a grid */
-  grid-template-rows: auto auto auto; /* Use normal grid rows instead of subgrid */
-  grid-row: span 3; /* Span 3 rows for each article */
+  display: grid;
+  grid-template-rows: auto auto auto; /* Keep articles structured with grid */
   border: 1px solid #ddd;
   padding: 1em;
   border-radius: 8px;
@@ -136,8 +135,8 @@ button:hover {
 
 /* Adjust margin on h2 for better alignment */
 .projects h2 {
-  margin: 0; /* Remove default margin */
-  font-size: 1.5em; /* Adjust font size for clarity */
+  margin: 0;
+  font-size: 1.5em; /* Adjust font size */
   margin-bottom: 0.5em;
 }
 
