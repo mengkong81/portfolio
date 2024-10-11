@@ -11,7 +11,7 @@ body {
 
 /* Define the accent color for the website */
 :root {
-  --color-accent: oklch(65% 50% 0); /* Customize your accent color */
+  --color-accent: #1E90FF; /* Customize your accent color */
   --color-accent-fallback: #ff6347; /* Fallback for browsers that don't support oklch */
 }
 
@@ -66,7 +66,7 @@ nav a {
 
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent, var(--color-accent-fallback)); /* Accent color on hover */
-  background-color: rgba(255, 99, 71, 0.1); /* Light background on hover (fallback) */
+  background-color: rgba(30, 144, 255, 0.1); /* Light background on hover (fallback) */
   border-radius: 5px; /* Rounded corners on hover */
 }
 
@@ -110,7 +110,7 @@ button {
 }
 
 button:hover {
-  background-color: oklch(65% 50% 0); /* Button hover background color */
+  background-color: #1E90FF; /* Button hover background color */
   color: white; /* Ensure button text stays visible on hover */
 }
 
