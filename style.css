@@ -162,3 +162,14 @@ button:hover {
   font-size: 0.9em;
   color: #666;
 }
+
+/* Allow the site to adapt to light and dark mode */
+html {
+  color-scheme: light dark;
+}
+
+/* Define the default border color for both modes */
+nav {
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom-color: var(--border-color);
+}
