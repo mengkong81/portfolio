@@ -14,6 +14,7 @@ let pages = [
 ];
 
 
+
 // Create nav and prepend to the body
 let nav = document.createElement('nav');
 document.body.prepend(nav);
