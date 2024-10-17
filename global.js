@@ -40,7 +40,6 @@ for (let p of pages) {
   if (a.host !== location.host) {
     a.target = '_blank';
   }
-
   nav.append(a);
 }
 
