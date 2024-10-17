@@ -1,18 +1,44 @@
-// Log message to verify JS is working
-console.log("IT'S ALIVE!");
+console.log('IT’S ALIVE!');
 
-// Define the $$ function to select elements using a selector
 function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
-// Step 2.1: Get an array of all nav links into a variable
-let navLinks = $$("nav a");
+// Navigation menu pages
+let pages = [
+  { url: '', title: 'Home' },
+  { url: 'projects/', title: 'Projects' },
+  { url: 'contact/', title: 'Contact' },
+  { url: 'https://linkedin.com/in/mengkongaun', title: 'Profile' },
+  { url: 'https://github.com/mengkong81', title: 'GitHub' }
+];
 
-// Step 2.2: Find the link to the current page
-let currentLink = navLinks.find(
-  (a) => a.host === location.host && a.pathname === location.pathname
-);
+// Create nav and prepend to the body
+let nav = document.createElement('nav');
+document.body.prepend(nav);
 
-// Step 2.3: Add the 'current' class to the current page link (if found)
-currentLink?.classList.add("current");
+// Determine if we're on the home page
+const ARE_WE_HOME = document.documentElement.classList.contains('home');
+
+// Loop through the pages and create links
+for (let p of pages) {
+  let url = p.url;
+  let title = p.title;
+
+  // Adjust relative links if we're not on the homepage
+  url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
+
+  let a = document.createElement('a');
+  a.href = url;
+  a.textContent = title;
+
+  // Add 'current' class if it's the current page
+  a.classList.toggle('current', a.host === location.host && a.pathname === location.pathname);
+
+  // Open external links in a new tab
+  if (a.host !== location.host) {
+    a.target = '_blank';
+  }
+
+  nav.append(a);
+}
