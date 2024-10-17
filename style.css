@@ -173,3 +173,11 @@ nav {
   --border-color: oklch(50% 10% 200 / 40%);
   border-bottom-color: var(--border-color);
 }
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%; /* Make the text smaller */
+  font-family: inherit; /* Inherit the same font */
+}
