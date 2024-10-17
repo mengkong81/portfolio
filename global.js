@@ -6,14 +6,12 @@ function $$(selector, context = document) {
 
 // Navigation menu pages
 let pages = [
-  { url: 'portfolio/', title: 'Home' },
-  { url: 'portfolio/projects/', title: 'Projects' },
-  { url: 'portfolio/contact/', title: 'Contact' },
+  { url: '', title: 'Home' },
+  { url: 'projects/', title: 'Projects' },
+  { url: 'contact/', title: 'Contact' },
   { url: 'https://linkedin.com/in/mengkongaun', title: 'Profile' },
   { url: 'https://github.com/mengkong81', title: 'GitHub' }
 ];
-
-
 
 // Create nav and prepend to the body
 let nav = document.createElement('nav');
@@ -44,6 +42,7 @@ for (let p of pages) {
 
   nav.append(a);
 }
+
 // Insert dark mode switch HTML at the start of the body
 document.body.insertAdjacentHTML(
   'afterbegin',

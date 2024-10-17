@@ -168,16 +168,89 @@ html {
   color-scheme: light dark;
 }
 
-/* Define the default border color for both modes */
-nav {
-  --border-color: oklch(50% 10% 200 / 40%);
-  border-bottom-color: var(--border-color);
+/* Dark mode specific styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212; /* Dark background */
+    color: #E0E0E0; /* Light text */
+  }
+
+  nav {
+    border-bottom-color: rgba(255, 255, 255, 0.2); /* Lighter border for dark mode */
+  }
+
+  button {
+    background-color: #333; /* Darker button background */
+    color: #E0E0E0; /* Light text */
+  }
+
+  button:hover {
+    background-color: #444; /* Slightly lighter on hover */
+    color: white;
+  }
+
+  .projects article {
+    background-color: #222; /* Darker article background */
+    border-color: rgba(255, 255, 255, 0.1); /* Light border */
+  }
+
+  nav a {
+    color: #E0E0E0; /* Light text for navigation links */
+  }
+
+  nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hover background */
+    border-bottom-color: #1E90FF; /* Keep the hover accent color */
+  }
+
+  nav a.current {
+    border-bottom-color: #1E90FF; /* Accent color for current page */
+    color: #1E90FF;
+  }
 }
 
+/* Small screen adjustments */
+@media (max-width: 600px) {
+  body {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .projects {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller columns for mobile */
+  }
+
+  nav a {
+    padding: 0.3em; /* Less padding for smaller screens */
+  }
+
+  h1 {
+    font-size: 2em; /* Adjust heading size for small screens */
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+/* Dark mode switch styling */
 .color-scheme {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  font-size: 80%; /* Make the text smaller */
-  font-family: inherit; /* Inherit the same font */
+  font-size: 80%;
+  font-family: inherit;
+}
+
+.color-scheme select {
+  background-color: #333;
+  color: #E0E0E0;
+  border: 1px solid #555;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.color-scheme select:hover {
+  background-color: #444;
+  border-color: #1E90FF;
 }
