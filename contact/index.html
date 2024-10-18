@@ -5,48 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Mengkong Aun</title>
     <link rel="stylesheet" href="../style.css">
-    <script type="module" src="../global.js"></script>
+    <script type="module" src="global.js"></script>
 </head>
 <body>
 
     <h1>Contact</h1>
 
     <!-- Contact Form -->
-    <form id="contact-form" action="mailto:mengkongaun@gmail.com" method="GET">
+    <form action="mailto:mengkongaun@gmail.com" method="POST" enctype="text/plain">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+        
         <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" required>
-
+        <input type="text" id="subject" name="subject">
+        
         <label for="body">Message:</label>
-        <textarea id="body" name="body" rows="5" required></textarea>
-
+        <textarea id="body" name="body" rows="5"></textarea>
+        
         <button type="submit">Send Email</button>
     </form>
-
-    <script>
-        const form = document.querySelector("#contact-form");
-
-        // Add event listener to intercept form submission
-        form?.addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent default form behavior
-
-            // Create a FormData object
-            const formData = new FormData(form);
-
-            // Build the mailto URL using the form's action attribute
-            let mailtoUrl = form.action + "?";
-
-            // Iterate through form fields and encode values
-            for (let [name, value] of formData) {
-                mailtoUrl += `${encodeURIComponent(name)}=${encodeURIComponent(value)}&`;
-            }
-
-            // Remove the trailing '&'
-            mailtoUrl = mailtoUrl.slice(0, -1);
-
-            // Open the email client with the prefilled data
-            location.href = mailtoUrl;
-        });
-    </script>
 
 </body>
 </html>
