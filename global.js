@@ -6,9 +6,9 @@ function $$(selector, context = document) {
 
 // Navigation menu pages
 let pages = [
-  { url: '/', title: 'Home' },
-  { url: '/projects/', title: 'Projects' },
-  { url: '/contact/', title: 'Contact' },
+  { url: './', title: 'Home' },
+  { url: './projects/', title: 'Projects' },
+  { url: './contact/', title: 'Contact' },
   { url: 'https://linkedin.com/in/mengkongaun', title: 'Profile' },
   { url: 'https://github.com/mengkong81', title: 'GitHub' }
 ];
@@ -25,8 +25,9 @@ for (let p of pages) {
   let url = p.url;
   let title = p.title;
 
-  // Adjust relative links if we're not on the homepage
-  url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
+  // Adjust relative links only if we're not on the homepage
+url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
+
 
   let a = document.createElement('a');
   a.href = url;
